@@ -1,4 +1,4 @@
-# React fundamental test proj
+# React fundamental test project
 
 This is a one-page website for managing posts (adding, deleting, sorting, search).
 
