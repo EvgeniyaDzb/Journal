@@ -11,7 +11,7 @@ const PostForm = ({create}) => {
         const newPost = {
             ...post, id: Date.now()
         }
-        // setPosts([...posts, { ...post, id: Date.now() }])
+
         create(newPost)
         setPost({ title: '', body: '' })
     };
@@ -25,13 +25,11 @@ const PostForm = ({create}) => {
                 placeholder='Post Name'
             />
             <MyInput
-                // ref = {bodyInputRef}
                 value={post.body}
                 onChange={e => setPost({ ...post, body: e.target.value })}
                 type='text'
                 placeholder='Post description'
             />
-            {/* <input ref={bodyInputRef} type='text'/> */}
             <MyButton onClick={addNewPost}>Add</MyButton>
         </form>
     );

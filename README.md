@@ -9,9 +9,10 @@ App demonstrates basic react opportunities:
 * Custom hooks 
   - based on useMemo for sorting and filtering posts 
   - to display loading
-* Reusable UI components including modal form, input, button, select, loader
+  - counting total page for paginatio
+* Reusable UI components including modal form, input, button, select, loader, pagination
 * Animation using React Transition Group
-* server side using Axios and [{JSON} Placeholder] (https://jsonplaceholder.typicode.com/)
+* server side using Axios and [{JSON} Placeholder](https://jsonplaceholder.typicode.com/)
 
 ## Environment
 
