@@ -5,10 +5,13 @@ This is a one-page website for managing posts (adding, deleting, sorting, search
 App demonstrates basic react opportunities: 
 * JSX
 * Functional components
-* Basic hooks (useState, useMemo)
-* Custom hooks (based on useMemo for sorting and filtering posts)
-* Reusable UI components including modal form, input, button, select
+* Basic hooks (useState, useMemo, useEffect)
+* Custom hooks 
+  - based on useMemo for sorting and filtering posts 
+  - to display loading
+* Reusable UI components including modal form, input, button, select, loader
 * Animation using React Transition Group
+* server side using Axios and [{JSON} Placeholder] (https://jsonplaceholder.typicode.com/)
 
 ## Environment
 

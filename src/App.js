@@ -7,6 +7,7 @@ import PostList from './components/PostList';
 import MyButton from './components/UI/button/MyButton';
 import Loader from './components/UI/loader/Loader';
 import MyModal from './components/UI/modal/MyModal';
+import {useFetching} from './hooks/useFetching';
 import { usePosts } from './hooks/usePosts';
 
 
@@ -16,22 +17,18 @@ function App() {
   const [filter, setFilter] = useState({ sort: '', query: '' })
   const [modal, setModal] = useState(false)
   const sortedAndSearchPosts = usePosts(posts, filter.sort, filter.query);
-  const [isPostsLoading, setIsPostsLoading] = useState(false);
+  const [fetchPosts, isPostsLoading, postError] = useFetching(async () => {
+    const posts = await PostService.getAll();
+    setPosts(posts)
+  })
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchPosts()
-  },[])
+  }, [])
 
   const createNewPost = (newPost) => {
     setPosts([...posts, newPost])
     setModal(false)
-  }
-
-  async function fetchPosts() {
-    setIsPostsLoading(true);
-    const posts = await PostService.getAll();
-    setPosts(posts)
-    setIsPostsLoading(false);
   }
 
   const removePost = (post) => {
@@ -48,6 +45,9 @@ function App() {
       </MyModal>
       <hr style={{ margin: '15px 8' }} />
       <PostFilter filter={filter} setFilter={setFilter} />
+      {postError &&
+         <h1>An error has occurred ${postError}</h1>
+      }
       {isPostsLoading
         ?
         <div style={{display: 'flex', justifyContent: 'center', marginTop: '50px'}}><Loader/></div>
