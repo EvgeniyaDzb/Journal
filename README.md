@@ -1,6 +1,6 @@
 # React fundamental test project
 
-This is a one-page website for managing posts (adding, deleting, sorting, search).
+This is website for managing posts (adding, deleting, sorting, search).
 
 App demonstrates basic react opportunities: 
 * JSX
@@ -9,10 +9,11 @@ App demonstrates basic react opportunities:
 * Custom hooks 
   - based on useMemo for sorting and filtering posts 
   - to display loading
-  - counting total page for paginatio
-* Reusable UI components including modal form, input, button, select, loader, pagination
+  - counting total page for pagination
+* Reusable UI components including modal form, input, button, select, loader, pagination, navbar
 * Animation using React Transition Group
-* server side using Axios and [{JSON} Placeholder](https://jsonplaceholder.typicode.com/)
+* Server side using Axios and [{JSON} Placeholder](https://jsonplaceholder.typicode.com/)
+* For routing [React Router](https://reactrouter.com/) v6+
 
 ## Environment
 
