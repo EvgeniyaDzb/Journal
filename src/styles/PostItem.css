@@ -7,10 +7,6 @@
     margin-top: 15px;
    }
    
-   /* .post_content{
-   
-   }
-   
    .post_btns{
-   
-   } */
+    display: flex;
+   }
