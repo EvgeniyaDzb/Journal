@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PostService from "../API/PostService";
+import Box from "../components/UI/box/Box";
 import Loader from "../components/UI/loader/Loader";
 import { useFetching } from "../hooks/useFetching";
 
@@ -37,9 +38,10 @@ const PostIdPage = () => {
                 : <div>
                     {comments.map(c => 
                         <div key={c.id}>
-                            <h5>{c.email}</h5>
-                            <div>{c.body}</div>
+                            <Box id={c.id} title={c.email} body={c.body}/>
                         </div>
+                       
+
                     )}
                 </div>
             }
