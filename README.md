@@ -5,15 +5,18 @@ This is website for managing posts (adding, deleting, sorting, search).
 App demonstrates basic react opportunities: 
 * JSX
 * Functional components
-* Basic hooks (useState, useMemo, useEffect)
+* Basic hooks (useState, useMemo, useEffect, useContext)
 * Custom hooks 
   - based on useMemo for sorting and filtering posts 
   - to display loading
   - counting total page for pagination
+  - observer for "Infinite scrolling"
+* Authorization (in case available pages and routing, whithout user check on server)
 * Reusable UI components including modal form, input, button, select, loader, pagination, navbar
 * Animation using React Transition Group
 * Server side using Axios and [{JSON} Placeholder](https://jsonplaceholder.typicode.com/)
-* For routing [React Router](https://reactrouter.com/) v6+
+* For routing [React Router](https://reactrouter.com/)
+* "Infinite scrolling" using [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 
 ## Environment
 
