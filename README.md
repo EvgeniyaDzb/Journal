@@ -1,21 +1,22 @@
-# React fundamental test project
+# Journal
 
-This is website for managing posts (adding, deleting, sorting, search).
+A journal that allows you to view, add and filter posts, open and see comments on them, also view albums and their contents. 
+Based on data from [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) and desire to learn React
 
-App demonstrates basic react opportunities: 
+App demonstrates react opportunities: 
 * JSX
 * Functional components
 * Basic hooks (useState, useMemo, useEffect, useContext)
 * Custom hooks 
-  - based on useMemo for sorting and filtering posts 
+  - based on useMemo for sorting and filtering posts s
   - to display loading
-  - counting total page for pagination
   - observer for "Infinite scrolling"
+  - counting total page for pagination
 * Authorization (in case available pages and routing, whithout user check on server)
-* Reusable UI components including modal form, input, button, select, loader, pagination, navbar
+* Reusable UI components including modal form, input, button, select, loader, pagination, navbar, animation items list
 * Animation using React Transition Group
 * Server side using Axios and [{JSON} Placeholder](https://jsonplaceholder.typicode.com/)
-* For routing [React Router](https://reactrouter.com/)
+* Routing using [React Router](https://reactrouter.com/)
 * "Infinite scrolling" using [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 
 ## Environment

@@ -20,13 +20,13 @@ const Navbar = () => {
       <div className={style.links}>
         <ul>
           <li>
-            <Link to='/albums' className={splitLocation[1] === "albums" ? style.active : ""}>
-              Albums
+            <Link to='/posts' className={splitLocation[1] === "posts" ? style.active : ""}>
+              Posts
             </Link>
           </li>
           <li>
-            <Link to='/posts' className={splitLocation[1] === "posts" ? style.active : ""}>
-              Posts
+            <Link to='/albums' className={splitLocation[1] === "albums" ? style.active : ""}>
+              Albums
             </Link>
           </li>
           <li> {isAuth && <a onClick={logout}>Log out</a>}</li>

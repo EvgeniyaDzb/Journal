@@ -48,11 +48,11 @@ const Albums = () => {
                     { value: -1, name: 'Show all' },
                 ]}
             />
-            {albumsError && navigate(`/error`)  }
-           
+            {albumsError && navigate(`/error`)}
+
             <AnimatedList title="The list of albums" items={albums} render={(item) => {
-                return <AlbumItem album={item}/>
-            }}/>
+                return <AlbumItem album={item} />
+            }} />
 
             {isAlbumsLoading &&
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}><Loader /></div>

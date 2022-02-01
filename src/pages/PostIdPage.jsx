@@ -31,7 +31,7 @@ const PostIdPage = () => {
             <h1>Post {post.id} page</h1>
             {isLoading
                 ? <Loader />
-                : <div>{post.id} {post.title}</div>
+                : <Box id={post.id} title={post.title}/>
             }
             <h1>Comments</h1>
             {isComLoading

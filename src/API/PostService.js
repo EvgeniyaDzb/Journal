@@ -37,7 +37,6 @@ export default class PostService {
                 albumId
             }
         });
-        console.log(response);
         return response;
     }
 }
