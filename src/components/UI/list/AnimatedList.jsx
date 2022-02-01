@@ -1,31 +1,32 @@
 import React from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import PostItem from './PostItem';
-import '../styles/PostListTransition.css'
+import Box from "../box/Box";
+// import PostItem from './PostItem';
+import './AnimatedListTransition.css'
 
-const PostList = (props) => {
-
-    if (!props.posts.length) {
+const AnimatedList = (props) => {
+    if (!props.items.length) {
         return (
             <h1 style={{ textAlign: 'center' }}>
                 List empty
             </h1>
         )
     }
+
     return (
         <div>
             <h1 style={{ textAlign: 'center' }}>
                 {props.title}
             </h1>
             <TransitionGroup>
-                {props.posts.map((post, index) =>
+                {props.items.map((item, index) =>
                     <CSSTransition
-                        key={post.id}
+                        key={item.id}
                         timeout={500}
                         classNames='post'
                     >
-                        <PostItem remove={props.remove} number={index + 1} post={post} />
-                    </CSSTransition>
+                    {props.render(item, index)}
+                   </CSSTransition>
                 )}
 
             </TransitionGroup>
@@ -33,4 +34,4 @@ const PostList = (props) => {
     );
 };
 
-export default PostList;
+export default AnimatedList;

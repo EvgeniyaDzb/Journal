@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../styles/Posts.css";
 import { useParams } from "react-router-dom";
 import PostService from "../API/PostService";
 import Box from "../components/UI/box/Box";
@@ -26,7 +27,7 @@ const PostIdPage = () => {
     }, [])
 
     return (
-        <div>
+        <div className="posts_root">
             <h1>Post {post.id} page</h1>
             {isLoading
                 ? <Loader />
@@ -38,10 +39,8 @@ const PostIdPage = () => {
                 : <div>
                     {comments.map(c => 
                         <div key={c.id}>
-                            <Box id={c.id} title={c.email} body={c.body}/>
+                        <Box id={c.id} title={c.email} body={c.body}/>
                         </div>
-                       
-
                     )}
                 </div>
             }

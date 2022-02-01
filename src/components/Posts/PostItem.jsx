@@ -1,15 +1,15 @@
 import React from "react";
-import '../styles/PostItem.css'
-import MyButton from "./UI/button/MyButton";
+import './styles/PostItem.css'
+import MyButton from "../UI/button/MyButton";
 import { useNavigate } from 'react-router-dom';
-import Box from "./UI/box/Box";
+import Box from "../UI/box/Box";
 
 const PostItem = (props) => {
   const navigate = useNavigate();
 
   function handleClick(event) {
     event.preventDefault();
-    navigate(`/posts/${props.post.id}`);
+    navigate(`/post/${props.post.id}`);
   }
   return (
     <div>
